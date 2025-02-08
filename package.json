@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "start": "npm run dev"
   },
   "dependencies": {
     "framer-motion": "^12.4.1",
@@ -29,6 +30,7 @@
     "eslint-plugin-react-refresh": "^0.4.18",
     "gh-pages": "^6.3.0",
     "globals": "^15.14.0",
+    "sass": "^1.84.0",
     "vite": "^6.1.0"
   }
 }
