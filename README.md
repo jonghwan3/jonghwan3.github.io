@@ -96,4 +96,4 @@ jobs:
 - 👉 Settings → Actions → General
 - Scroll to "Workflow permissions"
 - ✅ Select "Read and write permissions" - (instead of just "Read").
-- ✅ Click "Save".
+- ✅ Click "Save"
