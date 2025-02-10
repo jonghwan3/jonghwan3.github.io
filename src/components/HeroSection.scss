@@ -4,7 +4,7 @@ $primary-color: #28a745;
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), 
                 url('/background.jpg') center/cover no-repeat;
-    height: 40vh;
+    height: 30rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -14,14 +14,20 @@ $primary-color: #28a745;
     color: white;
   
     &__nav {
-      position: absolute;
+      position: fixed;
       display: flex;
       justify-content: space-between;
-      top: 2rem;
+      top: 0rem;
       width: 100%;
       text-align: center;
       font-size: 0.8rem;
       letter-spacing: 1px;
+      height: 4rem;
+      align-items: center;
+
+      &.tall-navbar {
+        background-color: $primary-color;
+      }
       
       ul {
         display: flex;
@@ -30,98 +36,139 @@ $primary-color: #28a745;
         padding: 0;
         margin: 0;
         flex-grow: 1; // Allows items to take up full space
-      }
-    
-      li:first-child {
-        font-size: 0.85rem;
-        margin-left: 2rem;
-        margin-right: auto; // Pushes everything else to the right
-      }
-    
-      li a {
-        text-decoration: none;
-        color: white;
-        font-weight: normal;
-        padding: 10px;
-        transition: background-color 0.3s;
-    
-        &:hover {
-          background-color: color.adjust(black, $lightness: 80%, $alpha: -0.7);
+        li:first-child {
+          font-size: 0.85rem;
+          margin-left: 2rem;
+          margin-right: auto; // Pushes everything else to the right
         }
-      }
-      li:last-child {
-        margin-right: 2rem;
-      }
-      .menu-btn {
-        padding: 0 2rem;
-        margin: 0;
-        display: none; // Hidden by default on larger screens
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 2rem;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: white;
-        z-index: 1100;
-      }
-    }
-    .sidebar {
-      position: fixed;
-      top: 0;
-      right: -100%; // Initially hidden off-screen
-      width: 20rem;
-      height: 100vh;
-      background: linear-gradient(
-        to bottom, 
-        color.adjust($primary-color, $lightness: -10%) 0%,  
-        color.adjust($primary-color, $lightness: -30%) 50%,  
-        color.adjust($primary-color, $lightness: -100%) 100%);
-      transition: right 0.3s ease-in-out;
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      padding: 50px 20px;
-      z-index: 1000;
-    
-      &.open {
-        display: none;
-        right: 0; // Slide in when open
-      }
-    
-      ul {
-        list-style: none;
-        padding: 0;
-        width: 100%;
-    
-        li {
-          padding: 15px 0;
-          transition: background-color 0.3s ease-in-out;
-          
-          a {
-            text-decoration: none;
-            color: white;
-            font-size: 0.9rem;
-            display: block;
-            text-align: left;
-            margin-left: 2rem;
-          }
+        li a {
+          text-decoration: none;
+          color: white;
+          font-weight: normal;
+          padding: 10px;
+          transition: background-color 0.3s;
+      
           &:hover {
             background-color: color.adjust(black, $lightness: 80%, $alpha: -0.7);
           }
         }
+        li:last-child {
+          margin-right: 2rem;
+        }
       }
+      .menu-container {
+        position: relative;
+        top: 0;
+        right: 0;
+        display: block;
+        align-items: center;
+        transition: right 0.3s ease-in-out;
+        display: none;
+
+        .menu-btn {
+          padding: 0 2rem;
+          margin-right: 0.5rem;
+          position: absolute;
+          top: -1rem;
+          right: 0;
+          font-size: 2rem;
+          background: none;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          color: white;
+          z-index: 1100;
+          transition: right 0.3s ease-in-out;
+          
+          .bar {
+            width: 1.5rem;
+            height: 0.05rem;
+            background-color: white;
+            transition: width 0.3s ease, transform 0.4s ease-in-out 0.4s;
+            margin-top: 0.45rem;
+          }
+          
+          .middle {
+            width: 1.1rem; /* Middle line is shorter by default */
+            transition: opacity 0.4s ease-in-out 0.4s, width 0.3s ease-in-out;
+          }
+          
+          &:hover {
+            .middle {
+              width: 1.5rem; /* Expand to match the other two lines on hover or when open */
+            }
+          }
+        }
+        .sidebar {
+          position: fixed;
+          top: 0;
+          right: -30rem; // Initially hidden off-screen
+          width: 20rem;
+          height: 100vh;
+          background: linear-gradient(
+            to bottom, 
+            color.adjust($primary-color, $lightness: -10%) 0%,  
+            color.adjust($primary-color, $lightness: -30%) 50%,  
+            color.adjust($primary-color, $lightness: -100%) 100%);
+          transition: right 0.3s ease-in-out;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          padding: 50px 20px;
+          z-index: 1000;
+        
+          &.open {
+            right: 0; // Slide in when open  
+          }
+        
+          .menu-item {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            transition: background-color 0.3s ease-in-out;
+            text-align: left;
     
-      .close-btn {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 24px;
-        color: white;
-        cursor: pointer;
+            a {
+              text-decoration: none;
+              color: white;
+              font-size: 0.9rem;
+              display: block;
+            }
+    
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.1);
+            }
+          }
+        }
       }
+      .menu-container.open {
+        .sidebar {
+          right: 0;
+        } 
+
+        .menu-btn {
+          right: 21rem;
+          transition: right 0.3s ease-in-out;
+        }
+        .menu-btn.open{
+
+          .top {
+            transform: rotate(45deg) translate(0.3rem, 0.6rem);
+          }
+  
+          .middle {
+            opacity: 0;
+          }
+  
+          .bottom {
+            transform: rotate(-45deg) translate(0.1rem, -0.4rem);
+          }
+
+        }
+
+      }
+      
     }
+    
     @media (max-width: 1033px) {
       .hero__nav {
         ul {
@@ -137,14 +184,54 @@ $primary-color: #28a745;
         .menu-btn {
           display: block; // Show only on smaller screens
         }
-      }
-      .sidebar {
-        &.open {
+        .menu-container {
           display: block;
+          
         }
       }
     }
 
+    @media (max-width: 400px) {
+      .hero__nav {
+        ul {
+          li {
+            a {
+                font-size: 0.7rem;
+            }
+          }
+        }
+        .menu-container {
+          .menu-btn {
+            .bar {
+              width: 1.2rem;
+              margin-top: 0.45rem;
+            }
+            
+            .middle {
+              width: 1.2rem; /* Middle line is shorter by default */
+            }
+          }
+      }
+
+      .menu-container.open {
+        .menu-btn {
+          right: 8.5rem;
+        }
+      }
+
+        .sidebar {
+          width: 8rem;
+          .menu-item { 
+            padding: 0.7rem 0.2rem;
+              a {
+                font-size: 0.5rem;
+                margin-left: 0.2rem;
+              }
+            
+          }
+          }
+      }
+    }
     
   
     &__content {
@@ -156,7 +243,7 @@ $primary-color: #28a745;
       width: 12rem;
       height: 12rem;
       border-radius: 50%;
-      margin-top: 6rem;
+      margin-top: 4rem;
       animation: borderExpand 2.5s infinite ease-in-out;
       transition: transform 0.3s;
 
@@ -176,10 +263,11 @@ $primary-color: #28a745;
       font-size: 2.2rem;
       font-weight: bold;
       margin-bottom: 0px;
+      margin-top: 0.3rem;
     }
   
     &__title {
-      margin-top: 0.5rem;
+      margin-top: 0.8rem;
       font-size: 0.9rem;
       font-weight: bold;
       margin-bottom: 1.2rem;
@@ -209,5 +297,29 @@ $primary-color: #28a745;
         outline: none;
       }
     }
+    
+    @media (max-width: 400px) {
+      .hero__image {
+        width: 9rem;
+        height: 9rem;
+        margin-top: 4rem;
+      }
+      .hero__name {
+        margin-top: 0.3rem;
+        font-size: 1.2rem;
+      }
+      .hero__title {
+        font-size: 0.6rem;
+        margin-bottom: 0.6rem;
+      }
+      .hero__btn {
+        font-size: 0.6rem;
+        padding: 7px 12px;
+      }
+    }
+}
+@media (max-width: 400px) {
+  .hero {
+    height: 50vh;
   }
-  
+}
