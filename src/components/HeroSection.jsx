@@ -7,8 +7,8 @@ const HeroSection = () => {
   const [isTall, setIsTall] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      console.log("Scroll position:", window.scrollY); // Debugging
-      setIsTall(window.scrollY > 480); // 30rem = 480px
+      const scrollThreshold = window.innerWidth < 400 ? 300 : 450; // Adjust for small screens
+      setIsTall(window.scrollY > scrollThreshold);
     };
 
     window.addEventListener("scroll", handleScroll);
