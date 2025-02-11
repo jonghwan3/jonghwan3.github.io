@@ -79,10 +79,12 @@ const Mobile = () => {
 
         <div className="mobiles-box">
             <div className="mobile-box">
+              <div className="android-container">
                 <video ref={videoRef} loop muted className="android-video">
                     <source src="android.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
+              </div>
                 <h2>Pitch Perfect Coach: An Android app for vocal training </h2>
                 <h3>
                 🎤 "Sing your heart out and get instant feedback! This Android app helps you perfect your pitch with real-time analysis, making vocal training fun, interactive, and effortlessly effective." 🎶✨
