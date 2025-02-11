@@ -4,6 +4,8 @@ import AboutBox from "./components/AboutBox";
 import FullStack from "./components/FullStack";
 import FrontEnd from "./components/Frontend";
 import Mobile from "./components/Mobile";
+import Research from "./components/Research";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <FullStack/>
       <FrontEnd/>
       <Mobile/>
+      <Research/>
+      <Contact/>
     </div>
   );
 }

@@ -1,0 +1,55 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    color: #2c2c2c;
+    letter-spacing: 0.5px;
+    h1 {
+      margin-top: 8rem;
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    }
+    .contacts-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: white;
+        margin: 1rem auto 10rem auto;
+        width: 70%;
+        border-radius: 8px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        align-items: center;
+        gap: 1rem;
+        font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+
+        .contact-box {
+            width: 70%;
+            margin: 3rem auto;
+            
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+
+            h2 {
+                margin-top: 2rem;
+                font-size: 1rem;
+                font-weight: 600;
+                margin-bottom: 0rem;
+                text-align: left;
+            }
+            h3 {
+                margin-top: 1rem;
+                width: 90%;
+                font-size: 0.9rem;
+                text-align: left;
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+            }
+        }
+    }
+}
