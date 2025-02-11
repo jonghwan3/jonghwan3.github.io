@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import AboutBox from "./components/AboutBox";
 import FullStack from "./components/FullStack";
 import FrontEnd from "./components/FrontEnd";
+import Mobile from "./components/Mobile";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <AboutBox/>
       <FullStack/>
       <FrontEnd/>
+      <Mobile/>
     </div>
   );
 }

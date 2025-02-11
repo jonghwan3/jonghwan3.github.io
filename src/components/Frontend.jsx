@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect, useRef } from "react";
 import "./SkillBox.scss"; // Import SCSS file
-import { video } from "framer-motion/client";
 
 const FullStack = () => {
     const videoRef = useRef(null);
@@ -31,20 +30,21 @@ const FullStack = () => {
     };
   }, []);
   return (
-    <div id="skills" className="item-container">
+    <div id="frontend" className="item-container">
         <h1>Frontend</h1>
             <div className="skills-box">
                 <div className="skill-box">
-                    <h2>Coursistant</h2>
                     <video ref={videoRef} loop muted className="skill-video">
                         <source src="frontend.mov" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-                    <h3>
-                        Developed a product introduction homepage.
-                        <br></br>
-                        Skills: React, Sass
-                    </h3>
+                    <h2>Coursistant: AI-Chatbot for eduacation</h2>
+                    <h3>🚀 "Coursistant is your AI-powered academic companion, revolutionizing the way students and experts engage with knowledge. 
+                      Designed for specialized fields, it provides a dynamic, customizable Q&A environment that keeps learning interactive and research cutting-edge. 
+                      Educators can effortlessly update content, ensuring accurate, real-time responses. Whether in the classroom or deep into research, 
+                      Coursistant is the essential tool for seamless, intelligent learning." 📚 ✨</h3>
+                    <h4>REACT, Sass</h4>
+                    <button className="primary-button" onClick={() => window.location.href = "https://coursistant.com"}>Learn more</button>
                 </div>
             </div>
     </div>

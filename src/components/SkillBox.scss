@@ -1,10 +1,19 @@
+@use "sass:color";
+$primary-color: #378C3F;
+$lighter-color: color.adjust($primary-color, $lightness: 8%);
 .item-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    color: #2c2c2c;
+    letter-spacing: 0.5px;
     h1 {
-      margin-top: 4rem;
+      margin-top: 8rem;
       font-size: 1.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
     }
     .skills-box {
         display: flex;
@@ -20,14 +29,20 @@
         gap: 1rem;
 
         .skill-box {
+
+            margin-top: 3rem;
             width: 95%;
             display: flex;
             flex-direction: column;
             // justify-content: center;
             align-items: center;
+            margin-bottom: 3rem;
 
             h2 {
                 font-size: 1.2rem;
+                font-weight: 600;
+                margin-bottom: 0rem;
+                text-transform: uppercase;
             }
     
             .skill-video {
@@ -37,9 +52,39 @@
             }
 
             h3 {
+                margin-top: 1rem;
                 width: 90%;
                 font-size: 1.1rem;
                 text-align: left;
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+            }
+
+            h4 {
+                width: 90%;
+                font-size: 1rem;
+                text-align: left;
+                color: $primary-color;
+                margin-top: 0.5rem;
+                text-transform: uppercase;
+            }
+            .primary-button {
+                background-color: $primary-color; // Blue color similar to the image
+                color: white;
+                font-size: 1rem;
+                font-weight: bold;
+                border: none;
+                outline: none;
+                padding: 15px 30px;
+                border-radius: 50px; // Rounded button
+                cursor: pointer;
+                transition: transform 0.3s;
+                // transition: background 0.3s ease-in-out;
+              
+                &:hover {
+                  transform: scale(1.08);
+                  background-color: $lighter-color; // Darker shade on hover
+                }
             }
         }
       
@@ -51,3 +96,103 @@
         }
       }
   }
+
+.mobile-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+color: #2c2c2c;
+letter-spacing: 0.5px;
+h1 {
+    margin-top: 8rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.mobiles-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    margin: 2rem auto 7rem auto;
+    width: 70%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    align-items: center;
+    gap: 1rem;
+
+    .mobile-box {
+        margin-top: 3rem;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        margin-bottom: 3rem;
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0rem;
+            text-transform: uppercase;
+        }
+
+        .ios-video {
+            width: 30%; /* Adjust size as needed */
+            height: auto;
+            border-radius: 10px; /* Optional: Rounded corners */
+        }
+        .android-video {
+            width: 70%; /* Adjust size as needed */
+            height: auto;
+            border-radius: 10px; /* Optional: Rounded corners */
+        }
+
+        h3 {
+            margin-top: 1rem;
+            width: 90%;
+            font-size: 1.1rem;
+            text-align: left;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        h4 {
+            width: 90%;
+            font-size: 1rem;
+            text-align: left;
+            color: $primary-color;
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+        }
+        .primary-button {
+            background-color: $primary-color; // Blue color similar to the image
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            padding: 15px 30px;
+            border-radius: 50px; // Rounded button
+            cursor: pointer;
+            transition: transform 0.3s;
+            // transition: background 0.3s ease-in-out;
+            
+            &:hover {
+                transform: scale(1.08);
+                background-color: $lighter-color; // Darker shade on hover
+            }
+        }
+    }
+    
+    // Responsive Design
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    }
+}

@@ -1,5 +1,6 @@
 @use "sass:color";
-$primary-color: #28a745;
+$base-green: #28a745;
+$primary-color: #378C3F;
 .hero {
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), 
@@ -12,6 +13,7 @@ $primary-color: #28a745;
     justify-content: center;
     text-align: center;
     color: white;
+    z-index: 1;
   
     &__nav {
       position: fixed;
@@ -107,15 +109,14 @@ $primary-color: #28a745;
           height: 100vh;
           background: linear-gradient(
             to bottom, 
-            color.adjust($primary-color, $lightness: -10%) 0%,  
-            color.adjust($primary-color, $lightness: -30%) 50%,  
-            color.adjust($primary-color, $lightness: -100%) 100%);
+            color.adjust($base-green, $lightness: -10%) 0%,  
+            color.adjust($base-green, $lightness: -30%) 50%,  
+            color.adjust($base-green, $lightness: -100%) 100%);
           transition: right 0.3s ease-in-out;
           display: flex;
           flex-direction: column;
           align-items: start;
           padding: 50px 20px;
-          z-index: 1000;
         
           &.open {
             right: 0; // Slide in when open  
@@ -169,7 +170,7 @@ $primary-color: #28a745;
       
     }
     
-    @media (max-width: 1033px) {
+    @media (max-width: 955px) {
       .hero__nav {
         ul {
           li {
@@ -233,11 +234,9 @@ $primary-color: #28a745;
           }
       }
     }
-    
-  
     &__content {
       position: absolute;
-      z-index: 1;
+      z-index: -1;
     }
   
     &__image {
@@ -291,7 +290,7 @@ $primary-color: #28a745;
       border: none;
   
       &:hover {
-        background-color: color.adjust($primary-color, $lightness: -10%);
+        background-color: color.adjust($primary-color, $lightness: 6%);
         transform: scale(1.08);
       }
       &:focus {

@@ -21,12 +21,11 @@ const HeroSection = () => {
         <ul>
           <li><a href="#summary">SUMMARY</a></li>
           <li><a href="#about">ABOUT</a></li>
-          <li><a href="#skills">SKILLS</a></li>
-          <li><a href="#projects">PROJECTS</a></li>
-          <li><a href="#experience">EXPERIENCE</a></li>
+          <li><a href="#fullstack">FULL STACK</a></li>
+          <li><a href="#frontend">FRONTEND</a></li>
+          <li><a href="#mobile">MOBILE</a></li>
           <li><a href="#research">RESEARCH</a></li>
           <li><a href="#education">EDUCATION</a></li>
-          <li><a href="#references">REFERENCES</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
         <div className={`menu-container ${isOpen ? "open" : ""}`}>
@@ -37,12 +36,11 @@ const HeroSection = () => {
           </button>
           <nav className={`sidebar ${isOpen ? "open" : ""}`}>
             <div className="menu-item"><a href="#about">ABOUT</a></div>
-            <div className="menu-item"><a href="#skills">SKILLS</a></div>
-            <div className="menu-item"><a href="#projects">PROJECTS</a></div>
+            <div className="menu-item"><a href="#fullstack">FULL STACK</a></div>
+            <div className="menu-item"><a href="#frontend">FRONTEND</a></div>
+            <div className="menu-item"><a href="#mobile">MOBILE</a></div>
             <div className="menu-item"><a href="#research">RESEARCH</a></div>
-            <div className="menu-item"><a href="#experience">EXPERIENCE</a></div>
             <div className="menu-item"><a href="#education">EDUCATION</a></div>
-            <div className="menu-item"><a href="#references">REFERENCES</a></div>
             <div className="menu-item"><a href="#contact">CONTACT</a></div>
           </nav>
         </div>

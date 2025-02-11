@@ -30,20 +30,24 @@ const FullStack = () => {
     };
   }, []);
   return (
-    <div id="skills" className="item-container">
+    <div id="fullstack" className="item-container">
         <h1>Full stack</h1>
         <div className="skills-box">
             <div className="skill-box">
-                <h2>Online marketplace</h2>
                 <video ref={videoRef} loop muted className="skill-video">
                     <source src="fullstack.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
+                <h2>SnapSell: A Smart Online Marketplace</h2>
                 <h3>
-                    Developed a full stack application.
-                    <br></br>
-                    Skills: React, Typescript, Go, Python, GraphQL, PostgreSQL
+                🚀 A smarter way to buy and sell! This web app, like Facebook Marketplace, 
+                streamlines the selling process with AI-powered image recognition - 
+                automatically generating item details so sellers can create listings effortlessly. 📸 🔍 ✨
                 </h3>
+                <h4>
+                  React, Typescript, Go, Python, GraphQL, PostgreSQL
+                </h4>
+                <button className="primary-button" onClick={() => window.location.href = "https://github.com/jonghwan3/marketplace"}>Learn more</button>
             </div>
         </div>
     </div>
