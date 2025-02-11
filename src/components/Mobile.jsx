@@ -4,6 +4,7 @@ import "./SkillBox.scss"; // Import SCSS file
 
 const Mobile = () => {
     const videoRef = useRef(null);
+    const videoRef1 = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -29,12 +30,38 @@ const Mobile = () => {
       }
     };
   }, []);
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (videoRef1.current) {
+          if (entry.isIntersecting) {
+            videoRef1.current.play();
+          } else {
+            videoRef1.current.pause();
+          }
+        }
+      },
+      { threshold: 0.5 } // Video should be at least 50% visible to play
+    );
+
+    if (videoRef1.current) {
+      observer.observe(videoRef1.current);
+    }
+
+    return () => {
+      if (videoRef1.current) {
+        observer.unobserve(videoRef1.current);
+      }
+    };
+  }, []);
   return (
     <div id="mobile" className="mobile-container">
         <h1>Mobile</h1>
         <div className="mobiles-box">
             <div className="mobile-box">
-                <video ref={videoRef} loop muted className="ios-video">
+                <video ref={videoRef1} loop muted className="ios-video">
                     <source src="ios.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
