@@ -19,13 +19,12 @@ const HeroSection = () => {
     <header className="hero">
       <nav className={`hero__nav ${isTall ? "tall-navbar" : ""}`}>
         <ul>
-          <li><a href="#summary">SUMMARY</a></li>
+          <li><a href="#">MAIN</a></li>
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#fullstack">FULL STACK</a></li>
           <li><a href="#frontend">FRONTEND</a></li>
           <li><a href="#mobile">MOBILE</a></li>
           <li><a href="#research">RESEARCH</a></li>
-          <li><a href="#education">EDUCATION</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
         <div className={`menu-container ${isOpen ? "open" : ""}`}>
@@ -40,7 +39,6 @@ const HeroSection = () => {
             <div className="menu-item"><a href="#frontend">FRONTEND</a></div>
             <div className="menu-item"><a href="#mobile">MOBILE</a></div>
             <div className="menu-item"><a href="#research">RESEARCH</a></div>
-            <div className="menu-item"><a href="#education">EDUCATION</a></div>
             <div className="menu-item"><a href="#contact">CONTACT</a></div>
           </nav>
         </div>

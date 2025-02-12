@@ -90,7 +90,7 @@ const Mobile = () => {
                 🎤 "Sing your heart out and get instant feedback! This Android app helps you perfect your pitch with real-time analysis, making vocal training fun, interactive, and effortlessly effective." 🎶✨
                 </h3>
                 <h4>
-                  Java, Android Studio
+                  Java, Android Studio, Signal Processing
                 </h4>
                 <button className="primary-button" onClick={() => window.location.href = "https://github.com/jonghwan3/Absolute_Pitch"}>Learn more</button>
             </div>

@@ -19,14 +19,12 @@ const Contact = () => {
       <h1>Contact me</h1>
       <div className="contacts-box">
         <div className="contact-box">
-            <h2>Address</h2>
-            <h3>Los Angeles, USA</h3>
 
             <h2>Email</h2>
-            <h3>jonghwan@usc.edu</h3>
+            <h3><a href="mailto:jonghwan@usc.edu">jonghwan@usc.edu</a></h3>
 
             <h2>LinkedIn</h2>
-            <h3>jonghwan3</h3>
+            <h3><a href="http://www.linkedin.com/in/jonghwan3">http://www.linkedin.com/in/jonghwan3</a></h3>
         </div>
       </div>
     </div>
