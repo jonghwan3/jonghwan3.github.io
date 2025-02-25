@@ -55,6 +55,7 @@ $primary-color: #378C3F;
 
                 a {
                     color: $primary-color;
+                    word-break: break-word;
                 }
             }
         }

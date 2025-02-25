@@ -45,7 +45,7 @@ const FullStack = () => {
                 automatically generating item details so sellers can create listings effortlessly. 📸 🔍 ✨
                 </h3>
                 <h4>
-                  React, Typescript, Go, Python, GraphQL, PostgreSQL, FastAPI, Docker
+                  React, Typescript, Go, Python, GraphQL, PostgreSQL, FastAPI, Open AI, Docker
                 </h4>
                 <button className="primary-button" onClick={() => window.location.href = "https://github.com/jonghwan3/marketplace"}>Learn more</button>
             </div>

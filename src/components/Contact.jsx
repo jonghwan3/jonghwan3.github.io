@@ -24,7 +24,11 @@ const Contact = () => {
             <h3><a href="mailto:jonghwan@usc.edu">jonghwan@usc.edu</a></h3>
 
             <h2>LinkedIn</h2>
-            <h3><a href="http://www.linkedin.com/in/jonghwan3">http://www.linkedin.com/in/jonghwan3</a></h3>
+            <h3>
+              <p>
+                <a href="http://www.linkedin.com/in/jonghwan3">http://www.linkedin.com/in/jonghwan3</a>
+              </p>
+            </h3>
         </div>
       </div>
     </div>

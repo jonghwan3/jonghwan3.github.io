@@ -31,7 +31,7 @@ const FullStack = () => {
   }, []);
   return (
     <div id="frontend" className="item-container">
-        <h1>Frontend</h1>
+        <h1><br></br></h1>
             <div className="skills-box">
                 <div className="skill-box">
                     <video ref={videoRef} loop muted className="skill-video">
@@ -43,7 +43,7 @@ const FullStack = () => {
                       Designed for specialized fields, it provides a dynamic, customizable Q&A environment that keeps learning interactive and research cutting-edge. 
                       Educators can effortlessly update content, ensuring accurate, real-time responses. Whether in the classroom or deep into research, 
                       Coursistant is the essential tool for seamless, intelligent learning." 📚 ✨</h3>
-                    <h4>REACT, Sass</h4>
+                    <h4>REACT, CSS, FLASK, FAST API, SPRING BOOT, HADOOP, LANGCHAIN, LlamaIndex, MySQL</h4>
                     <button className="primary-button" onClick={() => window.location.href = "https://coursistant.com"}>Learn more</button>
                 </div>
             </div>
