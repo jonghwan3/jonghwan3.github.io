@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useRef } from "react";
 import "./SkillBox.scss"; // Import SCSS file
 
-const FrontEnd = () => {
+const FullStack = () => {
     const videoRef = useRef(null);
 
   useEffect(() => {
@@ -30,24 +30,24 @@ const FrontEnd = () => {
     };
   }, []);
   return (
-    <div id="frontend" className="item-container">
-            <h1><br></br></h1>
+    <div id="fullstack2" className="item-container">
+        <h1><br></br></h1>
             <div className="skills-box">
                 <div className="skill-box">
                     <video ref={videoRef} loop muted className="skill-video">
-                        <source src="frontend.mov" type="video/mp4" />
+                        <source src="fullstack2.mov" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-                    <h2>AI-Powered Learning Management System (LMS)</h2>
-                    <h3>📘 "An AI-powered LMS is a smart, all-in-one platform that transforms the learning experience. 
-                        Educators can easily create and manage content, while AI helps personalize lessons, answer questions, and track student progress in real time. 
-                        Learners get instant support, tailored feedback, and flexible access to resources—anytime, anywhere. 
-                        Whether in schools, universities, or corporate training, this intelligent system keeps learning engaging, efficient, and effective." 🤖🎓</h3>
-                    <h4>React, SCSS, and Tailwind CSS</h4>
+                    <h2>Coursistant: AI-Chatbot for eduacation</h2>
+                    <h3>🚀 "Coursistant is your AI-powered academic companion, revolutionizing the way students and experts engage with knowledge. 
+                      Designed for specialized fields, it provides a dynamic, customizable Q&A environment that keeps learning interactive and research cutting-edge. 
+                      Educators can effortlessly update content, ensuring accurate, real-time responses. Whether in the classroom or deep into research, 
+                      Coursistant is the essential tool for seamless, intelligent learning." 📚 ✨</h3>
+                    <h4>REACT, CSS, FLASK, FAST API, SPRING BOOT, HADOOP, LANGCHAIN, LlamaIndex, MySQL</h4>
                     <button className="primary-button" onClick={() => window.location.href = "https://coursistant.com"}>Learn more</button>
                 </div>
             </div>
     </div>
   );
 };
-export default FrontEnd;
+export default FullStack;
