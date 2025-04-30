@@ -31,7 +31,7 @@ const FrontEnd = () => {
   }, []);
   return (
     <div id="frontend" className="item-container">
-            <h1><br></br></h1>
+            <h1>Frontend</h1>
             <div className="skills-box">
                 <div className="skill-box">
                     <video ref={videoRef} loop muted className="skill-video">
