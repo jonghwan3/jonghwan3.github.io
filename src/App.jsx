@@ -14,9 +14,9 @@ function App() {
     <div className="App">
       <HeroSection/>
       <AboutBox/>
+      <FrontEnd/>
       <FullStack/>
       <FullStack2/>
-      <FrontEnd/>
       <Mobile/>
       <Research/>
       <Contact/>

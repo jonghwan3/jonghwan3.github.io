@@ -21,8 +21,8 @@ const HeroSection = () => {
         <ul>
           <li><a href="#">MAIN</a></li>
           <li><a href="#about">ABOUT</a></li>
-          <li><a href="#fullstack">FULL STACK</a></li>
           <li><a href="#frontend">FRONTEND</a></li>
+          <li><a href="#fullstack">FULL STACK</a></li>
           <li><a href="#mobile">MOBILE</a></li>
           <li><a href="#research">RESEARCH</a></li>
           <li><a href="#contact">CONTACT</a></li>
@@ -35,8 +35,8 @@ const HeroSection = () => {
           </button>
           <nav className={`sidebar ${isOpen ? "open" : ""}`}>
             <div className="menu-item"><a href="#about">ABOUT</a></div>
-            <div className="menu-item"><a href="#fullstack">FULL STACK</a></div>
             <div className="menu-item"><a href="#frontend">FRONTEND</a></div>
+            <div className="menu-item"><a href="#fullstack">FULL STACK</a></div>
             <div className="menu-item"><a href="#mobile">MOBILE</a></div>
             <div className="menu-item"><a href="#research">RESEARCH</a></div>
             <div className="menu-item"><a href="#contact">CONTACT</a></div>
