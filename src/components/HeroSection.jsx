@@ -47,9 +47,10 @@ const HeroSection = () => {
       <div className="hero__content">
         <img src="profile.jpg" alt="Jonghwan" className="hero__image" />
         <h1 className="hero__name">Jonghwan Park</h1>
-        <p className="hero__title">SOFTWARE DEVELOPER | AI RESEARCHER</p>
+        <p className="hero__title">SOFTWARE DEVELOPER | AI DEVELOPER</p>
         <div className="hero__buttons">
-          <button className="hero__btn" onClick={() => window.open("resume.pdf", "_blank")}>Download Resume</button>
+          <button className="hero__btn" onClick={() => window.open("resume.pdf", "_blank")}>Download Software Developer Resume</button>
+          <button className="hero__btn" onClick={() => window.open("resume_AI.pdf", "_blank")}>Download AI Developer Resume</button>
           {/* <a href="#" className="hero__btn">Download AI Research Summary</a> */}
         </div>
       </div>
